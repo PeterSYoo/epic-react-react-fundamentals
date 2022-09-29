@@ -26,13 +26,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="root"></div>
     <script type="module">
       const divRoot = document.createElement('div')
-      divRoot.className = 'container'
-      divRoot.textContent = 'Hello World'
+      divRoot.setAttribute('id', 'root')
+      document.querySelector('body').append(divRoot)
 
-      document.getElementById('root').append(divRoot)
+      const div = document.createElement('div')
+      div.className = 'container'
+      div.textContent = 'Hello World'
+
+      document.getElementById('root').append(div)
     </script>
   </body>
 </html>
